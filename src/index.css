@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@font-face {
+  font-family: font1;
+  src: url('public/fonts/font1.woff2');
+}
+
+@font-face {
+  font-family: font2;
+  src: url('public/fonts/font2.woff2');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F6F6F4;
+  font-family: font1;
+}
+
+h1::selection, h2::selection, h3::selection, p::selection, a::selection, span::selection, div::selection{
+  background: #4fa4a56c;
+  color: #1f6b6c;
+}
