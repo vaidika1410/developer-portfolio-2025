@@ -25,9 +25,9 @@ export default function WhatIDo() {
   ];
 
   return (
-    <section className="py-10 bg-[#F6F6F4]">
+    <section className="py-15 bg-[#F6F6F4]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <h2 className="text-2xl font-bold text-[#0B0B0C] mb-10">
+        <h2 className="text-2xl font-bold text-[#0B0B0C] mb-5">
           What Drives My Work
         </h2>
 

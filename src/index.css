@@ -1,12 +1,12 @@
 @import 'tailwindcss';
 @font-face {
   font-family: font1;
-  src: url('public/fonts/font1.woff2');
+  src: url('/fonts/font1.woff2');
 }
 
 @font-face {
   font-family: font2;
-  src: url('public/fonts/font2.woff2');
+  src: url('/fonts/font2.woff2');
 }
 
 html {
@@ -21,4 +21,184 @@ body {
 h1::selection, h2::selection, h3::selection, p::selection, a::selection, span::selection, div::selection{
   background: #4fa4a56c;
   color: #1f6b6c;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+:root {
+  --navbar-height: 72px;
+}
+
+
+/* Project Timeline Wrapper */
+.project-timeline-wrapper {
+  position: sticky;
+  top: calc(var(--navbar-height) + 35px);
+  z-index: 20;
+}
+
+/* Timeline Container */
+.project-timeline {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.25rem 0;
+}
+
+.project-timeline-wrapper,
+.project-timeline {
+  max-width: 100%;
+  left: 50vw;
+  transform: translateX(-50vw);
+}
+
+
+/* Base Line */
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #e5e7eb; /* gray-200 */
+  border-radius: 999px;
+  transform: translateY(-50%);
+}
+
+/* Progress Line (static for now) */
+.timeline-progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #4FA3A5;
+  border-radius: 999px;
+  transform: translateY(-50%);
+}
+
+
+/* Labels */
+.timeline-label {
+  position: absolute;
+  top: -0.6rem;
+  font-size: 0.75rem;
+  color: #6b7280; /* gray-500 */
+  white-space: nowrap;
+}
+
+.timeline-start {
+  left: 0;
+}
+
+.timeline-end {
+  right: 0;
+}
+
+/* Milestone Dots */
+.timeline-dots {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 0.5rem;
+}
+
+.timeline-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #818489; /* gray-300 */
+  border-radius: 999px;
+}
+
+/* Dot wrapper */
+.timeline-dot-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Tooltip below the timeline */
+.timeline-tooltip {
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000; /* gray-900 */
+  color: #f9fafb;
+  font-size: 0.7rem;
+  padding: 6px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  text-align: center;
+  z-index: 30;
+}
+
+/* Tooltip arrow (pointing up now) */
+.timeline-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent transparent #111827 transparent;
+}
+
+
+/* Show tooltip on hover */
+.timeline-dot-wrapper:hover .timeline-tooltip {
+  opacity: 1;
+}
+
+.home-connect {
+  display: flex;
+  gap: 1vh;
+  margin-top: 1vh;
+}
+
+.home-connect a {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  color: #6b7280; /* gray-500 */
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.home-connect a:hover {
+  color: #4FA3A5;
+  background-color: rgba(79, 163, 165, 0.08);
+  transform: translateY(-2px);
+}
+
+.home-connect svg {
+  width: 20px;
+  height: 20px;
+}
+
+.page-wrapper {
+  padding-top: 6rem;   /* 96px */
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 640px) {
+  .page-wrapper {
+    padding-top: 7rem; /* 112px */
+    padding-bottom: 7rem;
+  }
 }

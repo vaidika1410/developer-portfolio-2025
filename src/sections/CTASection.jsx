@@ -13,7 +13,7 @@ export default function CTASection() {
             relative
             overflow-hidden
             rounded-[28px] sm:rounded-[32px]
-            bg-gradient-to-b from-white to-[#F3F4F3]
+            bg-gradient-to-b from-white to-[#4fa4a53b]
             border border-[#E2E3E0]
             p-8 sm:p-12
             shadow-[0_18px_45px_rgba(0,0,0,0.08)]

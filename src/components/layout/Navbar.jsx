@@ -1,8 +1,14 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 export default function Navbar() {
+  const location = useLocation();
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
+
   const [open, setOpen] = useState(false);
 
   const linkClass = ({ isActive }) =>
@@ -27,7 +33,7 @@ export default function Navbar() {
           >
             {/* Logo */}
             <div className="h-[6vh] w-[6vh] overflow-hidden">
-              <img className="h-full w-full object-cover object-top rounded-full" src="public/ProfilePicture.jpg" alt="Vaidika" />
+              <img loading="eager" fetchpriority="high" className="h-full w-full object-cover object-top rounded-full" src="/ProfilePicture.jpg" alt="Vaidika" />
             </div>
 
             {/* Desktop Nav */}
@@ -141,72 +147,124 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
               className="
-                fixed inset-0 z-40
-                bg-[#E6F3F3] backdrop-blur-sm
-              "
+          fixed inset-0 z-40
+          bg-[#E6F3F3]/80 backdrop-blur-sm
+        "
               onClick={() => setOpen(false)}
             />
 
             {/* Menu Panel */}
             <motion.div
-              initial={{ opacity: 0, y: -12, scale: 0.98 }}
+              initial={{ opacity: 0, y: -14, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -12, scale: 0.98 }}
+              exit={{ opacity: 0, y: -14, scale: 0.96 }}
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
               className="
-                fixed z-50
-                top-20 left-1/2 -translate-x-1/2
-                w-[92%] max-w-sm
-                rounded-2xl
-                bg-[#ffffff7e]
-                border border-[#E6E6E3]
-                p-5
-                shadow-[0_20px_40px_rgba(0,0,0,0.08)]
-              "
+          fixed z-50
+          top-24 left-1/2 -translate-x-1/2
+          w-[92%] max-w-sm
+          rounded-3xl
+          bg-white/80
+          backdrop-blur-xl
+          border border-[#E6E6E3]
+          px-6 py-6
+          shadow-[0_30px_60px_rgba(0,0,0,0.12)]
+        "
             >
-              <nav className="flex flex-col gap-4 items-center w-full">
-                <NavLink
-                  to="/"
-                  onClick={() => setOpen(false)}
-                  className={linkClass}
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  to="/projects"
-                  onClick={() => setOpen(false)}
-                  className={linkClass}
-                >
-                  Projects
-                </NavLink>
-                <NavLink
-                  to="/about"
-                  onClick={() => setOpen(false)}
-                  className={linkClass}
-                >
-                  About
-                </NavLink>
+              <nav className="flex flex-col items-center w-full">
 
-                <NavLink
-                  to="/contact"
-                  onClick={() => setOpen(false)}
-                  className={linkClass}
-                >
-                  Contact
-                </NavLink>
+                {/* Primary links */}
+                <div className="w-full space-y-2">
+                  <NavLink
+                    to="/"
+                    onClick={() => setOpen(false)}
+                    className={({ isActive }) =>
+                      `
+                  w-full block text-center
+                  px-5 py-3 rounded-full
+                  text-sm font-medium transition
+                  ${isActive
+                        ? "bg-[#F6F6F4] text-[#0B0B0C]"
+                        : "text-[#6B6F76] hover:bg-[#F6F6F4] hover:text-[#0B0B0C]"
+                      }
+                `
+                    }
+                  >
+                    Home
+                  </NavLink>
 
+                  <NavLink
+                    to="/projects"
+                    onClick={() => setOpen(false)}
+                    className={({ isActive }) =>
+                      `
+                  w-full block text-center
+                  px-5 py-3 rounded-full
+                  text-sm font-medium transition
+                  ${isActive
+                        ? "bg-[#F6F6F4] text-[#0B0B0C]"
+                        : "text-[#6B6F76] hover:bg-[#F6F6F4] hover:text-[#0B0B0C]"
+                      }
+                `
+                    }
+                  >
+                    Projects
+                  </NavLink>
+
+                  <NavLink
+                    to="/about"
+                    onClick={() => setOpen(false)}
+                    className={({ isActive }) =>
+                      `
+                  w-full block text-center
+                  px-5 py-3 rounded-full
+                  text-sm font-medium transition
+                  ${isActive
+                        ? "bg-[#F6F6F4] text-[#0B0B0C]"
+                        : "text-[#6B6F76] hover:bg-[#F6F6F4] hover:text-[#0B0B0C]"
+                      }
+                `
+                    }
+                  >
+                    About
+                  </NavLink>
+
+                  <NavLink
+                    to="/contact"
+                    onClick={() => setOpen(false)}
+                    className={({ isActive }) =>
+                      `
+                  w-full block text-center
+                  px-5 py-3 rounded-full
+                  text-sm font-medium transition
+                  ${isActive
+                        ? "bg-[#F6F6F4] text-[#0B0B0C]"
+                        : "text-[#6B6F76] hover:bg-[#F6F6F4] hover:text-[#0B0B0C]"
+                      }
+                `
+                    }
+                  >
+                    Contact
+                  </NavLink>
+                </div>
+
+                {/* Divider */}
+                <div className="w-full h-px bg-[#E6E6E3] my-5" />
+
+                {/* CTA */}
                 <NavLink
                   to="/contact"
                   onClick={() => setOpen(false)}
                   className="
-                    mt-2
-                    px-5 py-2
-                    rounded-full
-                    bg-[#0B0B0C]
-                    text-white
-                    text-sm font-medium
-                    text-center w-full
-                  "
+              w-full
+              px-5 py-3
+              rounded-full
+              bg-[#0B0B0C]
+              text-white
+              text-sm font-medium
+              text-center
+              hover:opacity-90 transition
+            "
                 >
                   Get in Touch
                 </NavLink>
@@ -215,6 +273,8 @@ export default function Navbar() {
           </>
         )}
       </AnimatePresence>
+
+
     </>
   );
 }

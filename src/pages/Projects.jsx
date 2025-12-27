@@ -1,10 +1,27 @@
-import { useState } from "react";
 import ProjectCard from "../components/projects/ProjectCard";
 import { featuredProjects, allProjects } from "../data/projects";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
+
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All");
+
+
+  const projectsRef = useRef(null);
+
+  const handleFilterChange = (filter) => {
+    setActiveFilter(filter);
+
+    requestAnimationFrame(() => {
+      projectsRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
+
+
 
   const filters = ["All", "Web", "AI/ML", "Systems", "Research", "Frontend"];
 
@@ -17,14 +34,14 @@ export default function Projects() {
     activeFilter === "All"
       ? allCombinedProjects
       : allCombinedProjects.filter((project) =>
-          project.tags?.some((tag) =>
-            tag.toLowerCase().includes(activeFilter.toLowerCase())
-          )
-        );
+        project.tags?.some((tag) =>
+          tag.toLowerCase().includes(activeFilter.toLowerCase())
+        )
+      );
 
   return (
     <main className="bg-[#F6F6F4]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-24 sm:py-28">
+      <div className="page-wrapper max-w-4xl mx-auto sm:px-6 px-5">
 
         {/* Header */}
         <section className="mb-16 max-w-3xl">
@@ -38,34 +55,77 @@ export default function Projects() {
         </section>
 
         {/* Filters */}
-        <section className="mb-16">
-          <div className="flex flex-wrap gap-3">
-            {filters.map((filter) => {
-              const isActive = activeFilter === filter;
+        <div className="mb-14">
+          <div className="relative overflow-x-auto no-scrollbar">
+            <div
+              className="
+        relative inline-flex items-center gap-4
+        border border-[#E6E6E3]
+        rounded-full
+        px-4 sm:px-8
+        bg-white
+        min-w-max
+      "
+            >
+              {/* Animated underline */}
+              <motion.div
+                layout
+                layoutId="project-filter-underline"
+                className="absolute bottom-0 h-[3px] rounded-full bg-[#0B0B0C]"
+                style={{
+                  width: "var(--underline-width)",
+                  left: "var(--underline-left)",
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 24,
+                }}
+              />
 
-              return (
+              {filters.map((filter) => (
                 <button
                   key={filter}
-                  onClick={() => setActiveFilter(filter)}
-                  className={`
-                    px-5 py-2 rounded-full text-sm font-medium border
-                    transition-all duration-200
-                    ${
-                      isActive
-                        ? "bg-[#0B0B0C] text-white border-[#0B0B0C] shadow-[0_4px_14px_rgba(0,0,0,0.12)]"
-                        : "bg-white text-[#5F6368] border-[#E6E6E3] hover:bg-[#F0F0EE]"
+                  onClick={() => handleFilterChange(filter)}
+
+                  ref={(el) => {
+                    if (activeFilter === filter && el) {
+                      const parent = el.parentElement;
+
+                      parent.style.setProperty(
+                        "--underline-width",
+                        `${el.offsetWidth}px`
+                      );
+
+                      parent.style.setProperty(
+                        "--underline-left",
+                        `${el.offsetLeft}px`
+                      );
                     }
-                  `}
+                  }}
+                  className={`
+            relative px-3 py-3 text-sm font-medium whitespace-nowrap
+            transition-colors
+            ${activeFilter === filter
+                      ? "text-[#0B0B0C]"
+                      : "text-[#6B6F76] hover:text-[#0B0B0C]"
+                    }
+          `}
                 >
                   {filter}
                 </button>
-              );
-            })}
+              ))}
+            </div>
           </div>
-        </section>
+        </div>
+
 
         {/* Projects Grid with animation */}
-        <section>
+        <section
+          ref={projectsRef}
+          className="scroll-mt-60"
+        >
+
           <motion.div
             layout
             className="grid gap-6 sm:grid-cols-2"

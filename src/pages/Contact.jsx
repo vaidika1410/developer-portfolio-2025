@@ -35,7 +35,7 @@ export default function Contact() {
 
   return (
     <main className="bg-[#F6F6F4]">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-28 sm:py-32">
+      <div className="page-wrapper max-w-4xl mx-auto px-5 sm:px-6">
 
         {/* Header */}
         <header className="mb-16 text-center sm:text-left">
@@ -57,12 +57,12 @@ export default function Contact() {
             <div>
               <p className="text-sm text-[#6B6F76]">Email</p>
               <p className="text-base font-medium text-[#0B0B0C]">
-                vaidikakaul20@email.com
+                vaidikakaul20@gmail.com
               </p>
             </div>
 
             <a
-              href="mailto:vaidikakaul20@email.com"
+              href="mailto:vaidikakaul20@gmail.com"
               className="inline-flex justify-center px-5 py-2.5 rounded-full bg-[#0B0B0C] text-white text-sm font-medium hover:opacity-90 transition"
             >
               Send email
@@ -134,8 +134,8 @@ export default function Contact() {
         </section>
 
         {/* Leave a Message */}
-        <section className="mt-20">
-          <div className="max-w-2xl">
+        <section className="mt-20 rounded-[24px] p-8 border border-[#0000003a]">
+          <div className="max-w-4xl">
 
             <h2 className="text-2xl font-medium text-[#0B0B0C] mb-4">
               Leave a message
@@ -190,7 +190,17 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="px-6 py-3 rounded-full bg-[#0B0B0C] text-white text-sm font-medium hover:opacity-90 transition disabled:opacity-60"
+                className="
+  w-full sm:w-auto
+  px-6 py-3
+  rounded-full
+  bg-[#0B0B0C]
+  text-white
+  text-sm font-medium
+  hover:opacity-90 transition
+  disabled:opacity-60
+"
+
               >
                 {status === "sending" ? "Sending..." : "Send message"}
               </button>

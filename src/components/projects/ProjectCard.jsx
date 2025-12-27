@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { techIconMap } from "../../constants/techIcons";
 
 export default function ProjectCard({ project }) {
   const navigate = useNavigate();
@@ -11,6 +12,8 @@ export default function ProjectCard({ project }) {
     tags = [],
     coverImage,
   } = project;
+
+  const MAX_TECH = 3;
 
   return (
     <div
@@ -36,7 +39,6 @@ export default function ProjectCard({ project }) {
             h-44 sm:h-48 w-full
             object-cover
             transition-transform duration-500
-            group-hover:scale-[1.04]
           "
         />
 
@@ -68,12 +70,58 @@ export default function ProjectCard({ project }) {
           {title}
         </h3>
 
-        <p className="text-sm text-[#5F6368] leading-relaxed mb-4 h-20">
-          {description}
+        <p className="text-sm text-[#6B6F76] leading-relaxed line-clamp-4">
+          {project.description}
         </p>
 
+        <div className="mt-4 flex flex-wrap gap-2">
+          {project.stack.slice(0, MAX_TECH).map((tech) => (
+            <span
+              key={tech}
+              className="
+        inline-flex items-center gap-2
+        px-2.5 py-1
+        text-xs
+        rounded-full
+        bg-[#F0F0EE]
+        text-[#5F6368]
+        border border-[#E6E6E3]
+      "
+            >
+              {/* Icon wrapper */}
+              <span
+                className="
+          flex items-center justify-center
+          w-3.5 h-3.5
+          shrink-0
+          opacity-75
+        "
+              >
+                {techIconMap[tech] ?? "•"}
+              </span>
+
+              <span className="leading-none">{tech}</span>
+            </span>
+          ))}
+
+          {project.stack.length > MAX_TECH && (
+            <span
+              className="
+        px-2.5 py-1
+        text-xs
+        rounded-full
+        border border-dashed border-[#E6E6E3]
+        text-[#6B6F76]
+      "
+            >
+              +{project.stack.length - MAX_TECH} more
+            </span>
+          )}
+        </div>
+
+
         {/* Footer */}
-        <div className="mt-5">
+        <div className="mt-10">
           <div className="flex gap-2">
             {liveUrl && (
               <a
@@ -92,7 +140,7 @@ export default function ProjectCard({ project }) {
                   flex items-center gap-2
                 "
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-arrow-out-up-right-icon lucide-square-arrow-out-up-right"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-arrow-out-up-right-icon lucide-square-arrow-out-up-right"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" /><path d="m21 3-9 9" /><path d="M15 3h6v6" /></svg>
                 <h3>Live</h3>
               </a>
             )}
@@ -114,7 +162,7 @@ export default function ProjectCard({ project }) {
                   flex items-center gap-2
                 "
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg>
                 <h3>GitHub</h3>
               </a>
             )}
