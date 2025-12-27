@@ -1,6 +1,17 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+import {
+  HiMail,
+  HiLocationMarker,
+  HiBriefcase,
+} from "react-icons/hi";
+
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
+
+
 export default function Contact() {
   const formRef = useRef(null);
   const [status, setStatus] = useState("idle");
@@ -53,13 +64,21 @@ export default function Contact() {
         <section className="space-y-6">
 
           {/* Email */}
-          <div className="rounded-[24px] bg-white border border-[#E6E6E3] p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <p className="text-sm text-[#6B6F76]">Email</p>
-              <p className="text-base font-medium text-[#0B0B0C]">
-                vaidikakaul20@gmail.com
-              </p>
+          <div className="group rounded-[24px] bg-white border border-[#E6E6E3] hover:border-[#4fa4a595] transition-all duration-500 p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+            <div className="flex items-center gap-4">
+              <HiMail className="text-[#4FA3A5] text-xl mt-0.5 transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:scale-105
+              "
+              />
+
+              <div>
+                <p className="text-sm text-[#6B6F76]">Email</p>
+                <p className="text-base font-medium text-[#0B0B0C]">
+                  vaidikakaul20@gmail.com
+                </p>
+              </div>
             </div>
+
 
             <a
               href="mailto:vaidikakaul20@gmail.com"
@@ -70,16 +89,21 @@ export default function Contact() {
           </div>
 
           {/* LinkedIn */}
-          <div className="rounded-[24px] bg-white border border-[#E6E6E3] p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <p className="text-sm text-[#6B6F76]">LinkedIn</p>
-              <p className="text-base font-medium text-[#0B0B0C]">
-                Connect with me professionally
-              </p>
+          <div className="group rounded-[24px] bg-white border border-[#E6E6E3] hover:border-[#4fa4a595] transition-all duration-500 p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <FaLinkedin className="text-[#4FA3A5] text-xl mt-0.5 transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:scale-105" />
+
+              <div>
+                <p className="text-sm text-[#6B6F76]">LinkedIn</p>
+                <p className="text-base font-medium text-[#0B0B0C]">
+                  Connect with me professionally
+                </p>
+              </div>
             </div>
 
+
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/vaidika-kaul-321b22316/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex justify-center px-5 py-2.5 rounded-full bg-white border border-[#E6E6E3] text-sm font-medium text-[#0B0B0C] hover:bg-[#F0F0EE] transition"
@@ -89,16 +113,23 @@ export default function Contact() {
           </div>
 
           {/* GitHub */}
-          <div className="rounded-[24px] bg-white border border-[#E6E6E3] p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <p className="text-sm text-[#6B6F76]">GitHub</p>
-              <p className="text-base font-medium text-[#0B0B0C]">
-                Explore my work & projects
-              </p>
+          <div className="group rounded-[24px] bg-white border border-[#E6E6E3] hover:border-[#4fa4a595] transition-all duration-500 p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+
+            <div className="flex items-center gap-4">
+              <FaGithub className="text-[#4FA3A5] text-xl mt-0.5 transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:scale-105" />
+
+              <div>
+                <p className="text-sm text-[#6B6F76]">GitHub</p>
+                <p className="text-base font-medium text-[#0B0B0C]">
+                  Explore my work & projects
+                </p>
+              </div>
             </div>
 
+
             <a
-              href="https://github.com/"
+              href="https://github.com/vaidika1410"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex justify-center px-5 py-2.5 rounded-full bg-white border border-[#E6E6E3] text-sm font-medium text-[#0B0B0C] hover:bg-[#F0F0EE] transition"
@@ -106,20 +137,54 @@ export default function Contact() {
               View GitHub
             </a>
           </div>
+
+          {/* X (Twitter) */}
+          <div className="group rounded-[24px] bg-white border border-[#E6E6E3] hover:border-[#4fa4a595] transition-all duration-500 p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <FaXTwitter
+                className="
+        text-[#4FA3A5] text-xl mt-0.5
+        transition-transform duration-300 ease-out
+        group-hover:-translate-y-0.5
+        group-hover:scale-105
+      "
+              />
+              <div>
+                <p className="text-sm text-[#6B6F76]">X (Twitter)</p>
+                <p className="text-base font-medium text-[#0B0B0C]">
+                  Follow my updates & thoughts
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="https://x.com/Vaidika10_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center px-5 py-2.5 rounded-full bg-white border border-[#E6E6E3] text-sm font-medium text-[#0B0B0C] hover:bg-[#F0F0EE] transition"
+            >
+              Open X
+            </a>
+          </div>
+
         </section>
 
         {/* Location & Availability */}
         <section className="mt-16">
           <div className="grid gap-6 sm:grid-cols-2">
 
-            <div className="rounded-[24px] bg-white border border-[#E6E6E3] p-5 sm:p-6">
+            <div className="group rounded-[24px] bg-white border border-[#E6E6E3] p-5 sm:p-6">
+              <HiLocationMarker className="text-[#4FA3A5] text-xl mt-0.5 transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:scale-105 mb-4" />
+
               <p className="text-sm text-[#6B6F76] mb-2">Location</p>
               <p className="text-base font-medium text-[#0B0B0C]">
                 Indore, India
               </p>
             </div>
 
-            <div className="rounded-[24px] bg-white border border-[#E6E6E3] p-5 sm:p-6">
+            <div className="group rounded-[24px] bg-white border border-[#E6E6E3] p-5 sm:p-6">
+              <HiBriefcase className="text-[#4FA3A5] text-xl mt-0.5 transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:scale-105 mb-4" />
+
               <p className="text-sm text-[#6B6F76] mb-2">Availability</p>
               <p className="text-base font-medium text-[#0B0B0C] mb-2">
                 Open to opportunities
@@ -221,7 +286,7 @@ export default function Contact() {
         </section>
 
         {/* Closing note */}
-        <footer className="mt-20">
+        <footer className="mt-10">
           <p className="text-sm text-[#6B6F76]">
             Prefer async communication? Email works best.
             I usually respond within a day.
