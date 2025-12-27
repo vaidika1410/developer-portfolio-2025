@@ -209,7 +209,7 @@ function Experience() {
             </div>
 
             {item.duration && (
-              <span className="inline-flex items-center
+              <span className="inline-flex w-max items-center
       px-3 h-max py-1
       rounded-full
       text-xs font-medium
