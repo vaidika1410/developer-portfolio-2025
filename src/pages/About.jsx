@@ -293,6 +293,7 @@ import {
   SiShadcnui,
   SiStreamlit,
   SiGithubactions,
+  SiNextdotjs,
 
 } from "react-icons/si";
 
@@ -316,6 +317,7 @@ function Skills() {
             { label: "CSS3", icon: SiCss3 },
             { label: "JavaScript (ES6+)", icon: SiJavascript },
             { label: "React", icon: SiReact },
+            { label: "Next.js", icon: SiNextdotjs},
             { label: "Tailwind CSS", icon: SiTailwindcss },
             { label: "Framer Motion", icon: SiFramer },
             { label: "GSAP", icon: SiGreensock },
@@ -336,6 +338,7 @@ function Skills() {
             { label: "Servlets" },
             { label: "MongoDB", icon: SiMongodb },
             { label: "MySQL", icon: SiMysql },
+            { label: "Firebase", icon: SiFirebase },
           ]}
         />
 
@@ -365,7 +368,6 @@ function Skills() {
 
             { label: "Vercel", icon: SiVercel },
             { label: "Render", icon: SiRender },
-            { label: "Firebase", icon: SiFirebase },
             { label: "Heroku", icon: SiHeroku },
 
             { label: "Docker", icon: SiDocker },
