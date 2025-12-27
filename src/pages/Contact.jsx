@@ -177,9 +177,11 @@ export default function Contact() {
               <HiLocationMarker className="text-[#4FA3A5] text-xl mt-0.5 transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:scale-105 mb-4" />
 
               <p className="text-sm text-[#6B6F76] mb-2">Location</p>
-              <p className="text-base font-medium text-[#0B0B0C]">
+              <p className="text-base font-medium text-[#0B0B0C] mb-2">
                 Indore, India
               </p>
+              <p className="text-sm text-[#6B6F76] leading-relaxed">
+                Open to relocation for suitable full-time or internship opportunities.</p>
             </div>
 
             <div className="group rounded-[24px] bg-white border border-[#E6E6E3] p-5 sm:p-6">

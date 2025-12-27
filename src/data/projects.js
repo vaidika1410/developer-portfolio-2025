@@ -80,7 +80,7 @@ export const featuredProjects = [
     ],
 
     liveUrl: "https://noctura-app.onrender.com",
-    githubUrl: "https://github.com/vaidika/noctura",
+    githubUrl: "https://github.com/vaidika1410/noctura-app",
 
     featured: true,
   },
@@ -156,7 +156,7 @@ export const featuredProjects = [
       "Streamlit",
     ],
 
-    githubUrl: "https://github.com/vaidika/anomaly-detection",
+    githubUrl: "https://github.com/Anomate-stream/anomate-stream",
 
     featured: true,
   },
@@ -233,7 +233,7 @@ export const featuredProjects = [
     ],
 
     liveUrl: "https://vaidika1410.github.io/Team-EXIA-ReimagineRound1/",
-    githubUrl: "https://github.com/vaidika/aorus-redesign",
+    githubUrl: "https://github.com/vaidika1410/Team-EXIA-ReimagineRound1",
 
     featured: true,
   },
@@ -387,7 +387,7 @@ export const allProjects = [
     ],
 
     liveUrl: "https://vaidika1410.github.io/Pastelane-Planner/",
-    githubUrl: "https://github.com/vaidika/pastelane-planner",
+    githubUrl: "https://github.com/vaidika1410/pastelane-planner",
   },
 
   // Rejouice Website Recreation
@@ -463,7 +463,7 @@ export const allProjects = [
     ],
 
     liveUrl: "https://vaidika1410.github.io/REJOUICE/",
-    githubUrl: "https://github.com/vaidika1410/rejouice-clone",
+    githubUrl: "https://github.com/vaidika1410/REJOUICE",
   },
 
   // TwoGoodCo. Website Recreation
@@ -538,7 +538,7 @@ export const allProjects = [
     ],
 
     liveUrl: "https://vaidika1410.github.io/TwoGoodCo./",
-    githubUrl: "https://github.com/vaidika/twogoodco-clone",
+    githubUrl: "https://github.com/vaidika1410/TwoGoodCo.",
   },
 
   // Steganography Detection 
