@@ -389,7 +389,7 @@ function Resume() {
       {/* Resume Preview */}
       <div className="rounded-[20px] border border-[#E6E6E3] overflow-hidden bg-white">
         <iframe
-          src="/Vaidika_Kaul_-_Frontend_Dev_Resume_2025.pdf"
+          src="/Vaidika_Kaul_Software_Developer_Resume_2025.pdf"
           title="Resume Preview"
           className="w-full h-[520px] sm:h-[640px]"
         />
