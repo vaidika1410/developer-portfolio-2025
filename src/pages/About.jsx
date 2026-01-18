@@ -398,7 +398,7 @@ function Resume() {
       {/* Actions */}
       <div className="flex flex-wrap gap-4 pt-2">
         <a
-          href="/Vaidika_Kaul_-_Frontend_Dev_Resume_2025.pdf"
+          href="/Vaidika_Kaul_Software_Developer_Resume_2025.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="
@@ -411,7 +411,7 @@ function Resume() {
         </a>
 
         <a
-          href="/Vaidika_Kaul_-_Frontend_Dev_Resume_2025.pdf"
+          href="/Vaidika_Kaul_Software_Developer_Resume_2025.pdf"
           download
           className="
             inline-flex px-5 py-2.5 rounded-full
