@@ -182,7 +182,6 @@ h1::selection, h2::selection, h3::selection, p::selection, a::selection, span::s
 
 .home-connect a:hover {
   color: #4FA3A5;
-  background-color: rgba(79, 163, 165, 0.08);
   transform: translateY(-2px);
 }
 

@@ -21,6 +21,12 @@ import {
   SiScikitlearn,
   SiOpencv,
   SiPython,
+  SiNextdotjs,
+  SiTypescript,
+  SiFramer,
+  SiMongoose,
+  SiThunderbird,
+  SiVercel,
 } from "react-icons/si";
 
 import {
@@ -39,6 +45,10 @@ export const techIconMap = {
   "CSS": <SiCss3 color="#1572B6" />,
   "JavaScript": <SiJavascript color="#F7DF1E" />,
   "GSAP": <Activity color="#0AE448" />,
+  "Next.js": <SiNextdotjs color="#000000" />,
+  "TypeScript": <SiTypescript color="#3178C6" />,
+  "Framer Motion": <SiFramer color="#0055FF" />,
+  "Lucide Icons": <Server color="#6B7280" />,
 
   /* ========= BACKEND ========= */
   "Node.js": <SiNodedotjs color="#339933" />,
@@ -47,6 +57,8 @@ export const techIconMap = {
   "JWT Authentication": <SiJsonwebtokens color="#000000" />,
   "Nodemailer": <Mail color="#0A66C2" />,
   "Flask": <SiPython color="#000000" />,
+  "REST API": <Server color="#10B981" />,
+  "Mongoose": <SiMongoose color="#880000" />,
 
   /* ========= INFRA ========= */
   "Payment Gateway": <SiStripe color="#635BFF" />,
@@ -69,4 +81,6 @@ export const techIconMap = {
   "Figma": <SiFigma color="#F24E1E" />,
   "Git": <SiGit color="#F05032" />,
   "GitHub": <SiGithub color="#181717" />,
+  "Thunder Client": <SiThunderbird color="#FF6C37" />,
+  "Vercel": <SiVercel color="#000000" />,
 };

@@ -1,4 +1,105 @@
 export const featuredProjects = [
+  // MAKNE
+  {
+    title: "MAKNE",
+    slug: "makne",
+
+    description:
+      "MAKNE is a full-stack SaaS platform designed to streamline brand–creator collaborations through structured agreements, milestone tracking, and secure workflow management. It transforms informal influencer deals into transparent, trackable, and contract-driven partnerships.",
+
+    overview:
+      "MAKNE was built to solve the lack of structure in brand–creator collaborations, where most partnerships rely on scattered chats, unclear expectations, and manual follow-ups. The goal was to design a scalable system that formalizes agreements, tracks deliverables through milestones, and ensures both brands and creators operate within a transparent, lifecycle-driven workflow.",
+
+    coverImage: "/projectImages/MAKNEBanner.png",
+
+    primaryTag: "SaaS",
+    tags: ["Full Stack", "SaaS", "Product", "Workflow System"],
+
+    role: "Full Stack Developer",
+    timeline: {
+      start: "Jan 2026",
+      end: "Ongoing",
+      events: [
+        { label: "Product Research & Architecture Planning", date: "3 Jan 2026" },
+        { label: "Agreement Lifecycle Implementation", date: "12 Jan 2026" },
+        { label: "Milestone Workflow System", date: "20 Jan 2026" },
+        { label: "Dashboard & UI Systemization", date: "28 Jan 2026" },
+        { label: "MVP Completion", date: "In Progress" }
+      ]
+    },
+
+    type: "Personal SaaS Product",
+
+    services: [
+      "Product ideation and SaaS workflow modeling",
+      "Role-based system architecture design",
+      "Full-stack application development",
+    ],
+
+    deliverables: [
+      "Agreement lifecycle system (Draft → Sent → Active)",
+      "Milestone submission, revision, and approval workflow",
+      "Role-based dashboards (Brand & Creator)",
+      "Deliverables and payment tracking structure",
+      "Responsive dark-first SaaS UI",
+    ],
+
+    challenges: [
+      "Designing a real-world agreement lifecycle that mimics legal workflows",
+      "Maintaining clean state management across complex statuses",
+      "Ensuring scalability for future AI-based extensions",
+    ],
+
+    solutions: [
+      "Lifecycle-driven status modeling with strict state transitions",
+      "Clear separation of server actions and route handlers",
+      "Reusable UI patterns for agreement detail and dashboards",
+    ],
+
+    impact: [
+      "Transforms informal brand–creator deals into structured partnerships",
+      "Reduces miscommunication through milestone-driven execution",
+      "Creates a scalable base for future AI and automation modules",
+    ],
+
+    learnings:
+      "Strengthened expertise in workflow-driven SaaS architecture, role-based access control, lifecycle state modeling, and balancing scalable backend systems with minimal, consistent UI patterns.",
+
+    stack: [
+      // Core Framework
+      "Next.js",
+      "React",
+      "TypeScript",
+
+      // Styling & UI
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lucide Icons",
+
+      // Backend & Database
+      "Node.js",
+      "MongoDB",
+      "Mongoose",
+      "REST API Design",
+
+      // Authentication & Security
+      "JWT Authentication",
+
+      // Dev & Testing Tools
+      "Thunder Client",
+
+      // Version Control & Deployment
+      "Git",
+      "GitHub",
+      "Vercel"
+    ],
+
+    liveUrl: "https://makne-os.vercel.app/",
+    githubUrl: "https://github.com/MAKNE-Platform/makne-os",
+
+    featured: true,
+  },
+
   // Noctura 
   {
     title: "Noctura App",
@@ -75,8 +176,10 @@ export const featuredProjects = [
       "MongoDB",
       "JWT Authentication",
       "Nodemailer",
-      "Payment Gateway",
+      // "Payment Gateway",
       "Render",
+      "Git",
+      "GitHub",
     ],
 
     liveUrl: "https://noctura-app.onrender.com",
@@ -310,7 +413,6 @@ export const featuredProjects = [
 
     githubUrl: "https://github.com/vaidika1410/k72-react-gsap-clone",
 
-    featured: true,
   },
 ];
 
