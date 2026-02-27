@@ -389,7 +389,7 @@ function Resume() {
       {/* Resume Preview */}
       <div className="rounded-[20px] border border-[#E6E6E3] overflow-hidden bg-white">
         <iframe
-          src="/Vaidika_Kaul_Software_Developer_Resume_2025.pdf"
+          src="/Vaidika_Kaul_Software_Developer_Resume_2026.pdf"
           title="Resume Preview"
           className="w-full h-[520px] sm:h-[640px]"
         />
@@ -398,7 +398,7 @@ function Resume() {
       {/* Actions */}
       <div className="flex flex-wrap gap-4 pt-2">
         <a
-          href="/Vaidika_Kaul_Software_Developer_Resume_2025.pdf"
+          href="/Vaidika_Kaul_Software_Developer_Resume_2026.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="
@@ -411,7 +411,7 @@ function Resume() {
         </a>
 
         <a
-          href="/Vaidika_Kaul_Software_Developer_Resume_2025.pdf"
+          href="/Vaidika_Kaul_Software_Developer_Resume_2026.pdf"
           download
           className="
             inline-flex px-5 py-2.5 rounded-full
