@@ -37,6 +37,18 @@ import {
   Server,
 } from "lucide-react";
 
+import {
+  Sparkles,
+  Workflow,
+  Bot,
+  Cpu,
+} from "lucide-react";
+
+import {
+  SiOpenai,
+  SiHuggingface,
+} from "react-icons/si";
+
 export const techIconMap = {
   /* ========= FRONTEND ========= */
   "React": <SiReact color="#61DAFB" />,
@@ -76,6 +88,15 @@ export const techIconMap = {
   "OpenCV": <SiOpencv color="#5C3EE8" />,
   "Isolation Forest": <Brain color="#6B7280" />,
   "Streamlit": <BarChart2 color="#FF4B4B" />,
+
+  /* ========= AI / LLM ========= */
+  "OpenAI": <SiOpenai color="#10A37F" />,
+  "LLMs": <Brain color="#8B5CF6" />,
+  "AI Integration": <Sparkles color="#F59E0B" />,
+  "Prompt Engineering": <Bot color="#3B82F6" />,
+  "AI Automation": <Workflow color="#EC4899" />,
+  "Machine Learning": <Cpu color="#6366F1" />,
+  "Hugging Face": <SiHuggingface color="#FFD21E" />,
 
   /* ========= TOOLS ========= */
   "Figma": <SiFigma color="#F24E1E" />,

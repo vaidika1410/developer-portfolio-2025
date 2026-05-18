@@ -82,6 +82,13 @@ export const featuredProjects = [
       "Mongoose",
       "REST API Design",
 
+      // AI / LLM
+      "OpenAI",
+      "LLMs",
+      "AI Integration",
+      "Prompt Engineering",
+      "AI Automation",
+
       // Authentication & Security
       "JWT Authentication",
 

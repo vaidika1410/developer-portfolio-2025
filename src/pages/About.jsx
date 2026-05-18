@@ -343,7 +343,7 @@ function Skills() {
         />
 
         <SkillCard
-          title="Gen AI"
+          title="Gen AI & AI Integrations"
           skills={[
             { label: "AI API Integration" },
             { label: "Prompt Engineering" },
