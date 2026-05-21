@@ -5,10 +5,10 @@ export const featuredProjects = [
     slug: "makne",
 
     description:
-      "MAKNE is a full-stack SaaS platform designed to streamline brand–creator collaborations through structured agreements, milestone tracking, and secure workflow management. It transforms informal influencer deals into transparent, trackable, and contract-driven partnerships.",
+      "MAKNE is a multi-tenant full-stack SaaS platform built to streamline brand–creator collaborations through structured agreements, milestone-based workflows, deliverable tracking, and secure lifecycle management. It transforms fragmented influencer partnerships into transparent, contract-driven, and operationally scalable collaboration systems.",
 
     overview:
-      "MAKNE was built to solve the lack of structure in brand–creator collaborations, where most partnerships rely on scattered chats, unclear expectations, and manual follow-ups. The goal was to design a scalable system that formalizes agreements, tracks deliverables through milestones, and ensures both brands and creators operate within a transparent, lifecycle-driven workflow.",
+      "MAKNE was designed to address the operational inefficiencies in modern brand–creator collaborations, where partnerships often depend on scattered communication, vague deliverables, and inconsistent follow-ups. The platform introduces a structured, lifecycle-driven workflow that formalizes agreements, tracks campaign deliverables through milestone systems, and enables brands and creators to collaborate within a transparent, scalable, and workflow-oriented environment.",
 
     coverImage: "/projectImages/MAKNEBanner.png",
 
