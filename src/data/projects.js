@@ -5,10 +5,10 @@ export const featuredProjects = [
     slug: "makne",
 
     description:
-      "MAKNE is a multi-tenant full-stack SaaS platform built to streamline brand–creator collaborations through structured agreements, milestone-based workflows, deliverable tracking, and secure lifecycle management. It transforms fragmented influencer partnerships into transparent, contract-driven, and operationally scalable collaboration systems.",
+      "MAKNE is a multi-tenant full-stack SaaS platform built to streamline brand–creator collaborations through structured agreements, milestone-based workflows, deliverable tracking, AI-assisted task automation, and secure lifecycle management. It transforms fragmented influencer partnerships into transparent, contract-driven, and operationally scalable collaboration systems.",
 
     overview:
-      "MAKNE was designed to address the operational inefficiencies in modern brand–creator collaborations, where partnerships often depend on scattered communication, vague deliverables, and inconsistent follow-ups. The platform introduces a structured, lifecycle-driven workflow that formalizes agreements, tracks campaign deliverables through milestone systems, and enables brands and creators to collaborate within a transparent, scalable, and workflow-oriented environment.",
+      "MAKNE was designed to address the operational inefficiencies in modern brand–creator collaborations, where partnerships often depend on scattered communication, vague deliverables, and inconsistent follow-ups. The platform introduces a structured, lifecycle-driven workflow that formalizes agreements, tracks campaign deliverables through milestone systems, and integrates AI-assisted automation to help brands and creators collaborate within a transparent, scalable, and workflow-oriented environment.",
 
     coverImage: "/projectImages/MAKNEBanner.png",
 
@@ -31,9 +31,11 @@ export const featuredProjects = [
     type: "Personal SaaS Product",
 
     services: [
-      "Product ideation and SaaS workflow modeling",
-      "Role-based system architecture design",
-      "Full-stack application development",
+      "Structured brand–creator collaboration management",
+      "Agreement and campaign lifecycle management",
+      "Milestone-based deliverable tracking",
+      "AI-assisted workflow and task automation",
+      "Role-based dashboards and collaboration systems",
     ],
 
     deliverables: [
@@ -41,29 +43,37 @@ export const featuredProjects = [
       "Milestone submission, revision, and approval workflow",
       "Role-based dashboards (Brand & Creator)",
       "Deliverables and payment tracking structure",
+      "AI-assisted creator task generation and workflow support",
       "Responsive dark-first SaaS UI",
+      "Tenant-aware collaboration and agreement management system",
     ],
 
     challenges: [
       "Designing a real-world agreement lifecycle that mimics legal workflows",
       "Maintaining clean state management across complex statuses",
       "Ensuring scalability for future AI-based extensions",
+      "Designing a multi-tenant architecture with secure tenant isolation",
+      "Integrating AI-generated workflow assistance without disrupting core business logic",
     ],
 
     solutions: [
       "Lifecycle-driven status modeling with strict state transitions",
       "Clear separation of server actions and route handlers",
       "Reusable UI patterns for agreement detail and dashboards",
+      "Tenant-aware resource ownership and access control architecture",
+      "AI-assisted workflow modules integrated through scalable service abstractions",
     ],
 
     impact: [
       "Transforms informal brand–creator deals into structured partnerships",
       "Reduces miscommunication through milestone-driven execution",
       "Creates a scalable base for future AI and automation modules",
+      "Introduces operational transparency through lifecycle-based collaboration tracking",
+      "Establishes a scalable foundation for AI-assisted creator workflow management",
     ],
 
     learnings:
-      "Strengthened expertise in workflow-driven SaaS architecture, role-based access control, lifecycle state modeling, and balancing scalable backend systems with minimal, consistent UI patterns.",
+      "Strengthened expertise in workflow-driven SaaS architecture, multi-tenant system design, role-based access control, lifecycle state modeling, AI-assisted workflow integration, and balancing scalable backend systems with minimal, consistent UI patterns.",
 
     stack: [
       // Core Framework
