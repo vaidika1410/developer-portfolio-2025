@@ -13,7 +13,7 @@ export const featuredProjects = [
     coverImage: "/projectImages/MAKNEBanner.png",
 
     primaryTag: "SaaS",
-    tags: ["Full Stack", "SaaS", "Product", "Workflow System"],
+    tags: ["Full Stack", "SaaS", "Web", "Product", "Workflow System"],
 
     role: "Full Stack Developer",
     timeline: {
@@ -113,6 +113,145 @@ export const featuredProjects = [
 
     liveUrl: "https://makne-os.vercel.app/",
     githubUrl: "https://github.com/MAKNE-Platform/makne-os",
+
+    featured: true,
+  },
+
+  // Karrio
+  {
+    title: "Karrio",
+    slug: "karrio",
+
+    description:
+      "Karrio is a full-stack SaaS job application tracking platform designed to help job seekers organize applications, manage interview pipelines, automate follow-ups, and save opportunities directly from LinkedIn. It combines application lifecycle management, reminder automation, Kanban workflows, and browser extension integration into a single productivity-focused system.",
+
+    overview:
+      "Karrio was built to solve the fragmented nature of modern job searching, where applications, interviews, follow-ups, and opportunities are often scattered across spreadsheets, bookmarks, and notes. The platform introduces a structured workflow for tracking job applications, managing interview stages, automating reminders, and capturing opportunities directly from LinkedIn through a Chrome extension. By centralizing the job search process into a single platform, Karrio enables users to stay organized, consistent, and data-driven throughout their career journey.",
+
+    coverImage: "/projectImages/KarrioBanner.png",
+
+    primaryTag: "SaaS",
+    tags: ["Full Stack", "SaaS", "Web", "Productivity", "Career Management"],
+
+    role: "Full Stack Developer",
+
+    timeline: {
+      start: "May 2026",
+      end: "Ongoing",
+      events: [
+        { label: "Product Planning & Architecture Design", date: "Apr 2026" },
+        { label: "Authentication & Core Backend Development", date: "Apr 2026" },
+        { label: "Application Tracking & Kanban System", date: "May 2026" },
+        { label: "Reminder Automation System", date: "May 2026" },
+        { label: "Chrome Extension Development", date: "May 2026" },
+        { label: "MVP Completion", date: "May 2026" }
+      ]
+    },
+
+    type: "Personal SaaS Product",
+
+    services: [
+      "Job application lifecycle management",
+      "Interview and follow-up tracking",
+      "Kanban-based application workflow management",
+      "Automated reminder scheduling",
+      "LinkedIn job capture through Chrome Extension"
+    ],
+
+    deliverables: [
+      "JWT-based authentication and user management",
+      "Application tracking and lifecycle system",
+      "Drag-and-drop Kanban workflow board",
+      "Activity timeline and audit tracking",
+      "Automated interview and follow-up reminders",
+      "LinkedIn Chrome Extension integration",
+      "Responsive dashboard with analytics and insights",
+      "Multi-stage interview pipeline management"
+    ],
+
+    challenges: [
+      "Designing a scalable application lifecycle for multiple hiring processes",
+      "Preventing duplicate application records across manual and extension-based entries",
+      "Synchronizing browser extension workflows with authenticated user sessions",
+      "Maintaining a clean audit trail for application activities and status changes",
+      "Designing reminder automation that can support future notification channels"
+    ],
+
+    solutions: [
+      "Implemented structured application status modeling with workflow-driven transitions",
+      "Added duplicate detection using company, role, URL, and user ownership checks",
+      "Created secure JWT-based communication between web app, extension, and API",
+      "Introduced activity logging through ApplicationActivity records",
+      "Built a scheduled reminder processing system using NestJS Cron jobs"
+    ],
+
+    impact: [
+      "Centralizes the entire job search workflow into a single platform",
+      "Reduces missed interviews and follow-ups through automated reminders",
+      "Eliminates reliance on spreadsheets and manual tracking methods",
+      "Improves visibility into application progress through Kanban workflows",
+      "Provides a scalable foundation for future AI-powered career management features"
+    ],
+
+    learnings:
+      "Strengthened expertise in full-stack SaaS architecture, monorepo development, NestJS backend design, Prisma data modeling, browser extension development, workflow-driven systems, background job processing, authentication systems, and building production-oriented products with multiple client applications.",
+
+    stack: [
+      // Core Framework
+      "Next.js",
+      "React",
+      "TypeScript",
+
+      // Styling & UI
+      "Tailwind CSS",
+      "Radix UI",
+      "Lucide Icons",
+      "shadcn/ui",
+
+      // State & Data Fetching
+      "TanStack Query",
+      "Axios",
+
+      // Backend & Database
+      "NestJS",
+      "PostgreSQL",
+      "Prisma ORM",
+      "REST API Design",
+
+      // Authentication & Security
+      "JWT Authentication",
+      "Passport.js",
+      "bcrypt",
+
+      // Browser Extension
+      "Chrome Extension API",
+      "Manifest V3",
+      "Plasmo",
+
+      // Infrastructure & DevOps
+      "Docker",
+      "Redis",
+      "Turborepo",
+      "pnpm Workspaces",
+
+      // Validation & Utilities
+      "Zod",
+      "class-validator",
+      "date-fns",
+
+      // Testing
+      "Jest",
+      "Supertest",
+
+      // Version Control & Deployment
+      "Git",
+      "GitHub",
+      "Vercel",
+      "Render"
+    ],
+
+    liveUrl: "https://karrio-extension-web.vercel.app/",
+    githubUrl: "https://github.com/vaidika1410/karrio-extension",
 
     featured: true,
   },
