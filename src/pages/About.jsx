@@ -106,9 +106,7 @@ function Intro() {
             Foundations
           </h3>
           <p className="mt-2 text-base sm:text-lg text-[#6B6F76] leading-relaxed">
-            I started with the web as a way to build things people could actually
-            use. Early on, my focus was on clarity — writing code that was easy
-            to reason about and interfaces that didn’t get in the user’s way.
+            I started with web development as a way to build products people could actually use. Early on, my focus was on writing clean, maintainable code and creating intuitive experiences that solved real user problems.
           </p>
         </div>
 
@@ -117,9 +115,7 @@ function Intro() {
             Building Products
           </h3>
           <p className="mt-2 text-base sm:text-lg text-[#6B6F76] leading-relaxed">
-            Shipping real projects shifted my perspective. Features mattered
-            less than how systems behaved under change, feedback, and iteration.
-            This is where maintainability and structure became non-negotiable.
+            As I began shipping full-stack applications, I became more interested in how products evolve over time. Scalability, maintainability, and workflow design became just as important as implementing individual features.
           </p>
         </div>
 
@@ -128,20 +124,16 @@ function Intro() {
             Systems Thinking
           </h3>
           <p className="mt-2 text-base sm:text-lg text-[#6B6F76] leading-relaxed">
-            As projects grew, I began thinking beyond individual components.
-            Trade-offs, data flow, and failure cases became just as important as
-            implementation details.
+            Building larger systems taught me to think beyond components and screens. I started focusing on architecture, data flow, security, and the trade-offs required to create reliable software that can grow with its users.
           </p>
         </div>
 
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wide text-[#4FA3A5]">
-            Applied AI
+            AI & AUTOMATION
           </h3>
           <p className="mt-2 text-base sm:text-lg text-[#6B6F76] leading-relaxed">
-            My interest in AI emerged naturally from this mindset. Models became
-            useful only when they fit into well-designed systems — supporting
-            real use cases instead of existing as isolated experiments.
+            Today, my work sits at the intersection of SaaS and AI. I enjoy integrating intelligent capabilities into products, using LLMs and machine learning to automate workflows, improve decision-making, and create software that delivers meaningful business value.
           </p>
         </div>
       </div>
@@ -156,7 +148,7 @@ function Experience() {
   const data = [
     {
       id: "steg",
-      title: "Research Internship – Satellite Image Steganography",
+      title: "Research Internship – Satellite Image Steganography Detection",
       organization: "Medi-Caps University · In-house Research",
       duration: "Jun 2025 – Jul 2025",
       description:
@@ -172,6 +164,15 @@ function Experience() {
       description:
         "Designed and trained a CNN-based forest fire detection system using satellite imagery, focusing on real-world environmental monitoring.",
       projectSlug: "forest-fire-detection",
+    },
+    {
+      id: "hcl-genai",
+      title: "Generative AI Industry Program – Banking Advisory Assistant",
+      organization: "HCL Tech",
+      duration: "Jan 2026 – Jun 2026",
+      description:
+        "Built a RAG-based banking advisory assistant using LangChain, ChromaDB, and Gemini, enabling semantic retrieval, context-aware question answering, and source-grounded responses from banking documents.",
+      githubUrl: "https://github.com/tasneemkhan2023/retail-banking-bot",
     },
     {
       id: "reimagine",
@@ -297,6 +298,14 @@ import {
 
 } from "react-icons/si";
 
+import {
+  SiTypescript,
+  SiPostgresql,
+  SiPrisma,
+  SiRedis,
+  SiNestjs,
+} from "react-icons/si";
+
 import { FaTerminal } from "react-icons/fa";
 import { SiGreensock } from "react-icons/si";
 
@@ -317,7 +326,7 @@ function Skills() {
             { label: "CSS3", icon: SiCss3 },
             { label: "JavaScript (ES6+)", icon: SiJavascript },
             { label: "React", icon: SiReact },
-            { label: "Next.js", icon: SiNextdotjs},
+            { label: "Next.js", icon: SiNextdotjs },
             { label: "Tailwind CSS", icon: SiTailwindcss },
             { label: "Framer Motion", icon: SiFramer },
             { label: "GSAP", icon: SiGreensock },
@@ -325,6 +334,9 @@ function Skills() {
             { label: "Swiper.js", icon: SiSwiper },
             { label: "Redux", icon: SiRedux },
             { label: "shadcn/ui", icon: SiShadcnui },
+            { label: "TypeScript", icon: SiTypescript },
+            { label: "Responsive UI Design" },
+
           ]}
         />
 
@@ -333,10 +345,14 @@ function Skills() {
           skills={[
             { label: "Node.js", icon: SiNodedotjs },
             { label: "Express.js", icon: SiExpress },
-            { label: "Java", icon: SiOpenjdk },
-            { label: "JSP" },
-            { label: "Servlets" },
+            { label: "NestJS", icon: SiNestjs },
+            { label: "REST APIs" },
+            { label: "JWT Authentication" },
+            { label: "RBAC" },
             { label: "MongoDB", icon: SiMongodb },
+            { label: "PostgreSQL", icon: SiPostgresql },
+            { label: "Prisma ORM", icon: SiPrisma },
+            { label: "Redis", icon: SiRedis },
             { label: "MySQL", icon: SiMysql },
             { label: "Firebase", icon: SiFirebase },
           ]}
@@ -345,12 +361,13 @@ function Skills() {
         <SkillCard
           title="Gen AI & AI Integrations"
           skills={[
-            { label: "AI API Integration" },
+            { label: "LLM Integration" },
+            { label: "OpenRouter" },
+            { label: "RAG" },
+            { label: "LangChain" },
             { label: "Prompt Engineering" },
-            { label: "Client-side AI Workflows" },
-            { label: "AI-assisted UI Features" },
-            { label: "AI Output Visualization" },
-
+            { label: "Machine Learning" },
+            { label: "Isolation Forest" },
             { label: "ChatGPT", icon: SiOpenai },
             { label: "Gemini", icon: SiGooglegemini },
             { label: "Gemini CLI", icon: FaTerminal },
@@ -369,6 +386,7 @@ function Skills() {
             { label: "Vercel", icon: SiVercel },
             { label: "Render", icon: SiRender },
             { label: "Heroku", icon: SiHeroku },
+            { label: "Neon" },
 
             { label: "Docker", icon: SiDocker },
             { label: "Postman", icon: SiPostman },
