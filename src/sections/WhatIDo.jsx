@@ -3,24 +3,29 @@ import Accordion from "../components/ui/Accordian";
 export default function WhatIDo() {
   const items = [
     {
-      title: "Web Application Development",
+      title: "Product-Focused Engineering",
       description:
-        "I design and build modern web applications with a strong focus on usability, performance, and maintainable code.",
+        "I build software with a strong emphasis on user experience, business impact, and long-term maintainability, turning ideas into production-ready products.",
     },
     {
-      title: "AI-Powered Web Solutions",
+      title: "AI-Enabled Applications",
       description:
-        "I integrate AI and machine learning into web products to create intelligent, data-driven features that solve real-world problems.",
+        "I integrate LLMs, machine learning, and intelligent workflows into products to automate processes, enhance decision-making, and deliver meaningful user value.",
+    },
+    {
+      title: "Full-Stack System Design",
+      description:
+        "From responsive interfaces to secure backend services and data architectures, I enjoy designing systems that remain scalable, reliable, and easy to evolve.",
+    },
+    {
+      title: "Continuous Learning & Innovation",
+      description:
+        "I actively explore emerging technologies, AI tooling, and modern engineering practices to build better products and stay ahead of industry trends.",
     },
     {
       title: "Research & Exploration",
       description:
-        "I actively research emerging technologies, machine learning concepts, and system design patterns to stay ahead and build better solutions.",
-    },
-    {
-      title: "Scalable & Clean Architecture",
-      description:
-        "I enjoy designing scalable, clean architectures that are easy to extend, debug, and maintain as products grow.",
+        "From machine learning and anomaly detection to generative AI and modern developer tooling, I enjoy exploring new domains and applying them to solve meaningful problems."
     },
   ];
 
