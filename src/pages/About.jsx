@@ -147,6 +147,23 @@ function Experience() {
 
   const data = [
     {
+      id: "camncloud",
+      title: "Full Stack Developer",
+      organization: "Camncloud",
+      duration: "Aug 2026 – Present",
+      description:
+        "Working as a Full Stack Developer, building and integrating web application features across the frontend and backend, with a focus on scalable APIs, application logic, and seamless user experiences.",
+      linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7500611624769048576/",
+    },
+    {
+      id: "quest-digiflex",
+      title: "Software Development Intern",
+      organization: "Quest Digiflex Private Limited",
+      duration: "May 2026 - Jul 2026",
+      description:
+        "Worked as a Software Development Intern, contributing to full-stack web development and backend engineering using React.js, Next.js, Node.js, and JavaScript, while building and integrating application features and APIs.",
+    },
+    {
       id: "steg",
       title: "Research Internship – Satellite Image Steganography Detection",
       organization: "Medi-Caps University · In-house Research",
@@ -254,6 +271,17 @@ function Experience() {
                   className="text-sm text-[#4FA3A5] hover:underline"
                 >
                   View repository ↗
+                </a>
+              )}
+
+              {item.linkedinUrl && (
+                <a
+                  href={item.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#4FA3A5] hover:underline"
+                >
+                  LinkedIn announcement ↗
                 </a>
               )}
             </div>
